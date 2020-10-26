@@ -1,22 +1,24 @@
 # Apache-Hadoop
 A documentation on understanding of Big data and Hadoop ecosystem.
 
-### Introduction :
+### Introduction to Big Data :
+Big Data is also data but with a huge size. Big Data is a term used to describe a collection of data that is huge in volume and yet growing exponentially with time. In short such data is so large and complex that none of the traditional data management tools are able to store it or process it efficiently.
 
-This is the introduction to BigData.First installed Virtual Machine and open Cloudera into that.Cloudera is built on Ubuntu.So now 
-if you want to work from windows install Putty(provide IP address of VM) and connect through SSH(Secure shell) to the virtual Linux Environment.Now , using Putty you can work on your virtual local machine.
-Now you can use the Linux commmands to work in linux environment , and if you want to work in Hadoop environment you need to learn some of the Hadoop Commands.There are functions like moving , copying ,creating , listing , local to Hadoop , Hadoop to local etc.
-We know that the same is available for linux too but bit of difference wrt syntax.
----------------------------------------------------------------------------------------------------------------------
 ### Hadoop:
 Hadoop is an open-source software framework for storing data and running applications on clusters of commodity hardware. It provides massive storage for any kind of data, 
 enormous processing power and the ability to handle virtually limitless concurrent tasks or jobs.
----------------------------------------------------------------------------------------------------------------------
 
------------------------------------------------------------------------------------------------------------------------\
+### Setup:
+First installed Virtual Machine and open Cloudera into that.Cloudera is built on Ubuntu.So now 
+if you want to work from windows install Putty(provide IP address of VM) and connect through SSH(Secure shell) to the virtual Linux Environment.Now , using Putty you can work on your virtual local machine.
+Now you can use the Linux commmands to work in linux environment , and if you want to work in Hadoop environment you need to learn some of the Hadoop Commands.There are functions like moving , copying ,creating , listing , local to Hadoop , Hadoop to local etc.
+We know that the same is available for linux too but bit of difference wrt syntax.
+
+### Term meaning:
 Stack - A storage device that handles data so that the next item to be retrieved is the item most recently stored (LIFO).
 Stack - An orderly pile
------------------------------------------------------------------------------------------------------------------------
+
+### Why Big Data ?
 1)Any login , will give you recommendation based on the historical data 
 2)Huge Volume of historical data ,based on this recommendation 
 3)Banking system - Customer is capable or not 
@@ -29,12 +31,12 @@ Stack - An orderly pile
 10)Big Data - lot of Data - Big Data eco system - ETL-Pipeline -where extract huge amount of data - process it -
 apply ML /DL model , Tableau ,deploy model.
 11)Each and every organisation has the demand for this.
----------------------------------------------------------------------------------------------------------------------
+
+### Hadoop Ecosystem :
 - Build ecosystem which support eco system for longer period to generate revenue 
 - Learn each and every technolgical stack /architectureof this entire big data ecosystem , able to design own Big data solution ,
 ,deploy into Azure , oracle , Alibaba ,Pivotal cloud etc.Docker and Kubernetes etc production grade system.There are different stack important in BIG Data 
 like Hadoop , Map reduce , Hive , Spark streaming ,Spark ML,Impala, PIG ,KFAKA ,Spark SQL.
------------------------------------------------------------------------------------------------------------------
 - At each transaction there will be data generated online shopping , movie ticket transaction etc 
 - This is required to make any financial decision
 - Recommendation of any product or movie 
@@ -43,7 +45,7 @@ like Hadoop , Map reduce , Hive , Spark streaming ,Spark ML,Impala, PIG ,KFAKA ,
 - For interview , aware of the both technological and architectural overview 
 - Implementation is there to give you confidence 
 ----------------------------------------------------------------------------------------------------------------------
-Hadoop System setup :
+### Hadoop System setup :
 - Setup system , Hadoop , problem with exisitng , Flumes ,kapka 
 - We need envirmonemt in local system , on cloud also we can do create environment like EC2(where configure multinode cluster) , Elastic Mapreduce Multinode cluster 
 - Run each and every code with help pf distributed computation 
@@ -62,7 +64,8 @@ You need a VM when you think a specific OS might cause trouble to your work comp
 6)Using different operating system is the advantage of VM 
 7)Cloud computing is the on-demand availability of computer system resources, especially data storage and computing power, without direct active management by the user. 
 The term is generally used to describe data centers available to many users over the Internet.
------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+### Practical approach and components of ecosystem:
 Start with Practical Now:
 - Through VMware open Cloudera open virtulisation software
 - HUE is Hadoop User Experience -Cloudera has created - whatever query you can do , CLI or HUE - browse each and every dataset in hadoop(Entirely on Java)
@@ -108,7 +111,7 @@ Through this will be able to login in cloudera environment.
 - Its a terminal hitting your virtual box/server 
 - Work in cloudera env using Putty
 
-----------------------------------------------------------------------------------------------------------
+### Linux Commands:
 As a Hadoop developer , Big Data Engineer :-
 Basics of Linux Commands:
 ls:each file in the directory home
@@ -126,7 +129,8 @@ cd ../../ :Absolute home directory of linux
 / :This is the absolute path 
 cd home/ : To home directory
 cp /home/cloudera/test1/test1.txt /home/cloudera/test2 :To copy file
-----------------------------------------------------------------------------------------------------------------
+
+### Data Enigneer (key commands):
 Data Engineer should know the below things:
 -This is somthing within Virtual Machine.
 If you wan to check the permissions to a file do ls -l
@@ -135,7 +139,8 @@ permission how to give to any file
 chmode 777 test1 -change the permission 
 chmod -R 777 test1 : to all the files in single shot read,write and execute 
 delete -RF something in directory forcefully delete it 
-------------------------------------------------------------------------------------------------------------------------
+
+### Remember some Hadoop Commands:
 As a Data Engineer you should know all these commands :
 Hadoop command :
 Cloudera :
@@ -158,8 +163,8 @@ you have to execute few hadoop command to get he filed in hdfc hadoop env.
 - hadoop fs -copyToLocal /test9/check.txt
 - hdfs dfs -df / , this gives you the total space of hdfs , used ,available etc 
 - hdfs dfs -du / , what all files present and their utilization
-----------------------------------------------------------------------------------------------------------------------
-As a Big Data Engineer you should know the Linux and Hadoop commands : 
+
+*As a Big Data Engineer you should know the Linux and Hadoop commands : *
 Hadoop in Linux :
 Hadoop fs -ls / :This is how you go into the Hadoop
 Hadoop fs -ls -R / :This gives each and every file in Hadoop machine.File inside a file ,root directory path
@@ -167,9 +172,8 @@ hadoop fs -ls -h / : File format and file size , this could be zero if no file i
 hadoop fs -ls -d /: directory each and every plane file 
 --You cannot create a dataset with same name or kinda duplicate in the same Hadoop environment/Folder
 --No override
-----------------------------------------------------------------------------------------------------------------------
-The permission grant has to be given to the file in hadoop using chmode to retrieve/get the file from hadoop to local machine.
---------------------------------------------------------------------------------------------------------
+--The permission grant has to be given to the file in hadoop using chmode to retrieve/get the file from hadoop to local machine.
+
 
 How to solve Big Data challenges :
 Data that is having high volume , high variety and high velocity is called a BigData
@@ -178,7 +182,8 @@ Data that is having high volume , high variety and high velocity is called a Big
 2nd Approach Scale out : Adding of new system to existing system , no migration etc needed here , data transfer headache will go off.
 So scale out approach is a better and good approach , entire HDFS is designed on this.
 HDFS : Hadoop Distributed File system is designed.
---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+### Scale In and Scale Out Approach:
 There are problems with Scale out approach also :
 - Client make request to Database(This is only stores the data) ,and this passed to the server for processing (Ram , Hardisk and CPU) , then replied back to the Client
 - Here any added system failure could lead to failure of entire system , so this is also not good 
@@ -188,7 +193,7 @@ There are problems with Scale out approach also :
 - Google published GFS ->dUCK KATTIN HAS developed -HDFS - This is a file system (not database)where data is in the system and is processed there only , helps in distributed computation , whatever computatio going on other system would be managed by it and assign job.
 - Duck kttins child toy elephant named Hadoop , from there this name came.
 
-------------------------------------------------------------------------------------------------------------------------------------------------------------
+### Hadoop Design and History:
 About Hadoop:
 GFS -Google File system 
 HDFS - Hadoop file system (tries to store data/information), this is open source library , anyone can distribute it , hdfs supports each programming lang, but hadoop itself built on Java
@@ -198,7 +203,8 @@ Any time if more hardware for computation in distributed , less time to add new 
 -Hardware Failure : Configurable copy of file of same thing , replica of three , any info in Hadoop , replica in different , no data loss
 - HDFS - storage unit ,file system not a processing unit at all , not database
 - Map reduce - 	so processing unit on top of hdfs called map reduce 
--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+### Components of Hadoop :
 Components of Hadoop1.x :
 1)Name node - This contains meta information about each and every file present in Hadoop Environment.While processing check here whether file is there or not ,not available store data then
 This first poc and most important concept MAster Slave architecture.This always store Minfornation,FS image(File system Image) , in memory maping of all the files
@@ -206,7 +212,8 @@ This first poc and most important concept MAster Slave architecture.This always 
 3)Job Tracker -> control execution of Map reduce , assigning process to each node , based on job exec in each node(Master) , overall system 
 4)Task Tracker ->Individual node ()within Mapreduce , check each job and notify to Job tracker
 5)Data Node -> final end here 
-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+### More to HDFS design :
 HDFS Design : 
 1) For large file system , and can process it in distributed computation environment
 2) Streaming dataset , process data in streaming env as well
@@ -216,7 +223,7 @@ HDFS Design :
 6) Fault Tolerance : Not loose any data 
 7) Data is available in continuous form in HDFS , not random so easy access to data 
 
---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+### How the Processing happens ?
 HDFS X1.0
 NameNode :
 Client ->Namenode->meta-FSImage ->File available or not 
@@ -224,8 +231,8 @@ Namenode ask job tracker ->in which node dataset is available -multiple -ask eac
 Data Node (system) this will be having the computation power RAM , CPU etc
 Master : (Name Node and JobTracker)
 Slave : (Task tracker and Data base node)  
-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
 
+### The End
 
 

@@ -1,3 +1,4 @@
+[<img src="https://miro.medium.com/max/875/1*XGXVeHCstEYu7DE1G1ywzg.jpeg" />]
 # Apache-Hadoop
 A documentation on understanding of Big data and Hadoop ecosystem.
 
